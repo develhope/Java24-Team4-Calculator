@@ -7,6 +7,19 @@ public class Main {
 
         System.out.println("CA:_CU:_ATOR 0.1 ");
 
+        System.out.println("Cosa vuoi fare?\n1. Sapere se numero pari o dispai\n2. Calcolazioni");
+        System.out.println("Scrivi il numero corrispondente alla tua scelta e premi invio");
+        Scanner selectInput = new Scanner(System.in);
+        int select = selectInput.nextInt();
+        if (select == 1) {
+            pariDispari();
+        } else if (select == 2) {
+            recognitionAndCalculation();
+        } else System.out.println("Input error!");
+    }
+
+    public static void recognitionAndCalculation() {
+
         System.out.println("Inserisci la prima operanda");
         Scanner input1 = new Scanner(System.in);
 
@@ -19,11 +32,7 @@ public class Main {
         Scanner inputOper = new Scanner(System.in);
         String operation = inputOper.next();
 
-        recognitionAndCalculation(operation, num1, num2);
 
-
-    }
-    public static void recognitionAndCalculation(String operation, int num1, int num2) {
         switch (operation) {
             case "+":
                 System.out.println(num1 + "+" + num2 + "=" + (double) somma(num1, num2));
@@ -36,8 +45,9 @@ public class Main {
                 break;
             case "/":
                 System.out.println(num1 + "/" + num2 + "=" + (double) divizione(num1, num2));
+                break;
             case "%":
-                System.out.println(num1 + "%" + num2 + "=" + (double) divizioneColResto(num1, num2));
+                divizioneColResto(num1, num2);
                 break;
             case "^":
                 System.out.println(num1 + "^" + num2 + "=" + (double) potenza(num1, num2));
@@ -46,6 +56,6 @@ public class Main {
                 System.out.println("Input error");
                 break;
         }
-
     }
 }
+
