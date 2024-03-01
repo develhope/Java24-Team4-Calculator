@@ -41,7 +41,7 @@ public class Main {
                 System.out.println(num1 + "%" + num2 + "=" + (double) divizioneColResto(num1, num2));
                 break;
             case "^":
-                System.out.println(num1 + "^" + num2 + "=" + (double) potenza(num1, num2));
+                System.out.println(num1 + "^" + num2 + "=" + (double) potenza.calcolaPotenza(num1, num2));
                 break;
             default:
                 System.out.println("Input error");
