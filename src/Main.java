@@ -1,9 +1,8 @@
 import java.util.Scanner;
 
-
 public class Main {
-  
-  public static void main(String[] args) {
+
+    public static void main(String[] args) {
 
         System.out.println("CA:_CU:_ATOR 0.1 ");
 
@@ -15,7 +14,8 @@ public class Main {
             pariDispari();
         } else if (select == 2) {
             recognitionAndCalculation();
-        } else System.out.println("ERRORE!");
+        } else
+            System.out.println("ERRORE!");
     }
 
     public static void recognitionAndCalculation() {
@@ -31,7 +31,6 @@ public class Main {
         System.out.println("Inserisci operazione ( + | - | * | / | % | ^ |)");
         Scanner inputOper = new Scanner(System.in);
         String operation = inputOper.next();
-
 
         switch (operation) {
             case "+":
@@ -57,8 +56,8 @@ public class Main {
                 break;
         }
     }
-  
-  public static double sottrazione(int num1, int num2) {
-    return num1 - num2;
+
+    public static double sottrazione(int num1, int num2) {
+        return num1 - num2;
     }
 }
