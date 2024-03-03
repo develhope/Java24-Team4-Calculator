@@ -44,7 +44,7 @@ public class Main {
                 System.out.println(num1 + "*" + num2 + "=" + (double) moltiplicazione(num1, num2));
                 break;
             case "/":
-                System.out.println(num1 + "/" + num2 + "=" + (double) divizione(num1, num2));
+                System.out.println(num1 + "/" + num2 + "=" + (double) divisione(num1, num2));
                 break;
             case "%":
                 divizioneColResto(num1, num2);
@@ -57,5 +57,24 @@ public class Main {
                 break;
         }
     }
-}
 
+
+    public static double divisione(double num1, double num2) {
+        if (num2 != 0) {
+            return num1 / num2;
+        } else {
+            System.out.println("Impossibile dividere per zero");
+            return Double.NaN; // Not a Number
+        }
+    }
+    public static void divizioneColResto(double num1, double num2) {
+        if (num2 != 0) {
+            double quoziente = num1 / num2;
+            double resto = num1 % num2;
+            System.out.println("Quoziente: " + quoziente);
+            System.out.println("Resto: " + resto);
+        } else {
+            System.out.println("Divisione per zero!");
+        }
+    }
+}
