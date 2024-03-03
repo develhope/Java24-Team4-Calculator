@@ -57,5 +57,21 @@ public class Main {
                 break;
         }
     }
+
+    public static void pariDispari() {
+        Scanner inserisciNumero = new Scanner(System.in);
+
+        System.out.println("Inserisci un numero:");
+        int numero = inserisciNumero.nextInt();
+
+        if (numero % 2 == 0) {
+            System.out.println("Numero `e pari");
+        } else {
+            System.out.println("Numero `e dispari");
+        }
+    }
 }
+
+
+
 
