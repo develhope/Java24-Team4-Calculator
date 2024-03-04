@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-
 public class Main {
 
     public static void main(String[] args) {
@@ -15,7 +14,8 @@ public class Main {
             pariDispari();
         } else if (select == 2) {
             recognitionAndCalculation();
-        } else System.out.println("Input error!");
+        } else
+            System.out.println("Input error!");
     }
 
     public static void recognitionAndCalculation() {
@@ -31,7 +31,6 @@ public class Main {
         System.out.println("Inserisci operazione ( + | - | * | / | % | ^ |)");
         Scanner inputOper = new Scanner(System.in);
         String operation = inputOper.next();
-
 
         switch (operation) {
             case "+":
@@ -57,5 +56,8 @@ public class Main {
                 break;
         }
     }
-}
 
+    public static double somma(double num1, double num2) {
+        return num1 + num2;
+    }
+}
