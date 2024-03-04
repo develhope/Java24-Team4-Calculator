@@ -61,7 +61,7 @@ public class Main {
 
     public static double divisione(double num1, double num2) {
         if (num2 != 0) {
-            return num1 / num2;
+            return (double) num1 / (double) num2;
         } else {
             System.out.println("Impossibile dividere per zero");
             return Double.NaN; // Not a Number
@@ -69,7 +69,7 @@ public class Main {
     }
     public static void divizioneColResto(double num1, double num2) {
         if (num2 != 0) {
-            double quoziente = num1 / num2;
+            double quoziente = (double) num1 / (double) num2;
             double resto = num1 % num2;
             System.out.println("Quoziente: " + quoziente);
             System.out.println("Resto: " + resto);
