@@ -15,7 +15,8 @@ public class Main {
         } else if (select == 2) {
             recognitionAndCalculation();
         } else
-            System.out.println("ERRORE!");
+            System.out.println("Input error!");
+            System.out.println("ERRORE!"); 
     }
 
     public static void recognitionAndCalculation() {
@@ -76,8 +77,12 @@ public class Main {
         }
     }
 
+    public static double somma(double num1, double num2) {
+        return num1 + num2;
+    }
+
     public static double sottrazione(double num1, double num2) {
         return num1 - num2;
+
     }
 }
-develop
