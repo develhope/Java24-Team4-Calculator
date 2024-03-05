@@ -15,7 +15,8 @@ public class Main {
         } else if (select == 2) {
             recognitionAndCalculation();
         } else
-            System.out.println("ERRORE!");
+            System.out.println("Input error!");
+            System.out.println("ERRORE!"); 
     }
 
     public static void recognitionAndCalculation() {
@@ -64,16 +65,17 @@ public class Main {
         int numero = inserisciNumero.nextInt();
 
         if (numero % 2 == 0) {
-            System.out.println("Numero `e pari");
+            System.out.println("Numero è pari");
         } else {
-            System.out.println("Numero `e dispari");
+            System.out.println("Numero è dispari");
         }
     }
 
+    public static double somma(double num1, double num2) {
+        return num1 + num2;
+    }
     public static double sottrazione(double num1, double num2) {
         return num1 - num2;
+
     }
 }
-
-
-
