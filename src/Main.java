@@ -15,8 +15,7 @@ public class Main {
         } else if (select == 2) {
             recognitionAndCalculation();
         } else
-            System.out.println("Input error!");
-            System.out.println("ERRORE!"); 
+            System.out.println("ERRORE!");
     }
 
     public static void recognitionAndCalculation() {
@@ -58,14 +57,6 @@ public class Main {
         }
     }
 
-    public static double divisione(double num1, double num2) {
-        if (num2 != 0) {
-            return (double) num1 / (double) num2;
-        } else {
-            System.out.println("Impossibile dividere per zero");
-            return Double.NaN; // Not a Number
-        }
-    }
     public static void divizioneColResto(double num1, double num2) {
         if (num2 != 0) {
             double quoziente = (double) num1 / (double) num2;
@@ -74,6 +65,31 @@ public class Main {
             System.out.println("Resto: " + resto);
         } else {
             System.out.println("Divisione per zero!");
+
+
+        }
+    }
+
+    public static double divisione(double num1, double num2) {
+        if (num2 != 0) {
+            return (double) num1 / (double) num2;
+        } else {
+            System.out.println("Impossibile dividere per zero");
+            return Double.NaN; // Not a Number
+        }
+    }
+
+    public static void pariDispari() {
+        Scanner inserisciNumero = new Scanner(System.in);
+
+        System.out.println("Inserisci un numero:");
+        int numero = inserisciNumero.nextInt();
+
+        if (numero % 2 == 0) {
+            System.out.println("Numero è pari");
+        } else {
+            System.out.println("Numero è dispari");
+
         }
     }
 
