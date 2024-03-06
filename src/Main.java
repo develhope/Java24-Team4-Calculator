@@ -15,8 +15,7 @@ public class Main {
         } else if (select == 2) {
             recognitionAndCalculation();
         } else
-            System.out.println("Input error!");
-            System.out.println("ERRORE!"); 
+            System.out.println("ERRORE!");
     }
 
     public static void recognitionAndCalculation() {
@@ -24,33 +23,33 @@ public class Main {
         System.out.println("Inserisci il primo operatore");
         Scanner input1 = new Scanner(System.in);
 
-        int num1 = input1.nextInt();
+        double num1 = input1.nextDouble();
         System.out.println("Inserisci il secondo operatore");
         Scanner input2 = new Scanner(System.in);
-        int num2 = input2.nextInt();
+        double num2 = input2.nextDouble();
 
-        System.out.println("Inserisci operazione ( + | - | * | / | % | ^ |)");
+        System.out.println("Inserisci operazione ( | + | - | * | / | % | ^ | )");
         Scanner inputOper = new Scanner(System.in);
         String operation = inputOper.next();
 
         switch (operation) {
             case "+":
-                System.out.println(num1 + "+" + num2 + "=" + (double) somma(num1, num2));
+                System.out.println(num1 + " + " + num2 + " = " + somma(num1, num2));
                 break;
             case "-":
-                System.out.println(num1 + "-" + num2 + "=" + (double) sottrazione(num1, num2));
+                System.out.println(num1 + " - " + num2 + " = " + sottrazione(num1, num2));
                 break;
             case "*":
-                System.out.println(num1 + "*" + num2 + "=" + (double) moltiplicazione(num1, num2));
+                System.out.println(num1 + " * " + num2 + " = " + moltiplicazione(num1, num2));
                 break;
             case "/":
-                System.out.println(num1 + "/" + num2 + "=" + (double) divisione(num1, num2));
+                System.out.println(num1 + " / " + num2 + " = " + divisione(num1, num2));
                 break;
             case "%":
                 divizioneColResto(num1, num2);
                 break;
             case "^":
-                System.out.println(num1 + "^" + num2 + "=" + (double) potenza(num1, num2));
+                System.out.println(num1 + " ^ " + num2 + " = " + potenza(num1, num2));
                 break;
             default:
                 System.out.println("Errore");
@@ -74,8 +73,38 @@ public class Main {
     public static double somma(double num1, double num2) {
         return num1 + num2;
     }
+
     public static double sottrazione(double num1, double num2) {
         return num1 - num2;
 
+    }
+
+    public static double moltiplicazione(double num1, double num2) {
+        return num1 * num2;
+    }
+
+    public static double potenza(double num1, double num2) {
+        return Math.pow(num1, num2);
+    }
+
+    public static double divisione(double num1, double num2) {
+        if (num2 != 0) {
+            return num1 / num2;
+        } else {
+            System.out.println("Impossibile dividere per zero");
+            return Double.NaN;
+        }
+    }
+
+    public static void divizioneColResto(double num1, double num2) {
+        if (num2 != 0) {
+            double quoziente = num1 / num2;
+            double resto = num1 % num2;
+            System.out.println("Quoziente: " + quoziente);
+            System.out.println("Resto: " + resto);
+        } else {
+            System.out.println("Divisione per zero!");
+
+        }
     }
 }
