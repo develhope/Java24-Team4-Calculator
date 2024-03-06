@@ -1,8 +1,5 @@
 import java.util.Scanner;
 
-
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -18,8 +15,9 @@ public class Main {
         } else if (select == 2) {
             recognitionAndCalculation();
         } else
-            System.out.println("Input error!");
-        System.out.println("ERRORE!");
+            System.out.println("ERRORE!");
+
+
     }
 
     public static void recognitionAndCalculation() {
@@ -77,15 +75,17 @@ public class Main {
     public static double somma(double num1, double num2) {
         return num1 + num2;
     }
+
     public static double sottrazione(double num1, double num2) {
         return num1 - num2;
 
     }
+
     public static double moltiplicazione(int num1, int num2) {
         return num1 * num2;
     }
+
     public static double potenza(double num1, double num2) {
         return Math.pow(num1, num2);
     }
-}
 }
