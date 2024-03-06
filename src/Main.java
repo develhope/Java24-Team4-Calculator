@@ -58,6 +58,18 @@ public class Main {
         }
     }
 
+    public static void pariDispari() {
+        Scanner inserisciNumero = new Scanner(System.in);
+
+        System.out.println("Inserisci un numero:");
+        int numero = inserisciNumero.nextInt();
+
+        if (numero % 2 == 0) {
+            System.out.println("Numero è pari");
+        } else {
+            System.out.println("Numero è dispari");
+        }
+    }
 
     public static double somma(double num1, double num2) {
         return num1 + num2;
