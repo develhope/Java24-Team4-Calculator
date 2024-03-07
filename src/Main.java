@@ -19,6 +19,19 @@ public class Main {
             System.out.println("ERRORE!");
     }
 
+    public static void pariDispari() {
+        Scanner inserisciNumero = new Scanner(System.in);
+
+        System.out.println("Inserisci un numero:");
+        int numero = inserisciNumero.nextInt();
+
+        if (numero % 2 == 0) {
+            System.out.println("Il numero è pari");
+        } else {
+            System.out.println("Il numero è dispari");
+        }
+    }
+
     public static void recognitionAndCalculation() {
 
         System.out.println("Inserisci il primo operatore");
@@ -43,31 +56,18 @@ public class Main {
             case "*":
                 System.out.println(num1 + " * " + num2 + " = " + moltiplicazione(num1, num2));
                 break;
+            case "^":
+                System.out.println(num1 + " ^ " + num2 + " = " + potenza(num1, num2));
+                break;
             case "/":
                 System.out.println(num1 + " / " + num2 + " = " + divisione(num1, num2));
                 break;
             case "%":
                 divizioneColResto(num1, num2);
                 break;
-            case "^":
-                System.out.println(num1 + " ^ " + num2 + " = " + potenza(num1, num2));
-                break;
             default:
                 System.out.println("ERRORE!");
                 break;
-        }
-    }
-
-    public static void pariDispari() {
-        Scanner inserisciNumero = new Scanner(System.in);
-
-        System.out.println("Inserisci un numero:");
-        int numero = inserisciNumero.nextInt();
-
-        if (numero % 2 == 0) {
-            System.out.println("Il numero è pari");
-        } else {
-            System.out.println("Il numero è dispari");
         }
     }
 
@@ -99,7 +99,7 @@ public class Main {
     }
 
     public static void divizioneColResto(double num1, double num2) {
-        
+
         if (num2 != 0) {
             double quoziente = num1 / num2;
             double resto = num1 % num2;
