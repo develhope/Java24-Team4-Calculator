@@ -4,12 +4,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("CA:_CU:_ATOR 0.1 ");
+        System.out.println("CA:_CU:_ATOR 1.0 ");
 
         System.out.println("Cosa vuoi fare?\n1. Per sapere se il è numero pari o dispai \n2. Per fare i Calcoli");
         System.out.println("Scrivi il numero corrispondente alla tua scelta e premi invio");
         Scanner selectInput = new Scanner(System.in);
         int select = selectInput.nextInt();
+
         if (select == 1) {
             pariDispari();
         } else if (select == 2) {
@@ -22,8 +23,8 @@ public class Main {
 
         System.out.println("Inserisci il primo operatore");
         Scanner input1 = new Scanner(System.in);
-
         double num1 = input1.nextDouble();
+
         System.out.println("Inserisci il secondo operatore");
         Scanner input2 = new Scanner(System.in);
         double num2 = input2.nextDouble();
@@ -52,7 +53,7 @@ public class Main {
                 System.out.println(num1 + " ^ " + num2 + " = " + potenza(num1, num2));
                 break;
             default:
-                System.out.println("Errore");
+                System.out.println("ERRORE!");
                 break;
         }
     }
@@ -64,9 +65,9 @@ public class Main {
         int numero = inserisciNumero.nextInt();
 
         if (numero % 2 == 0) {
-            System.out.println("Numero è pari");
+            System.out.println("Il numero è pari");
         } else {
-            System.out.println("Numero è dispari");
+            System.out.println("Il numero è dispari");
         }
     }
 
@@ -88,6 +89,7 @@ public class Main {
     }
 
     public static double divisione(double num1, double num2) {
+
         if (num2 != 0) {
             return num1 / num2;
         } else {
@@ -97,6 +99,7 @@ public class Main {
     }
 
     public static void divizioneColResto(double num1, double num2) {
+        
         if (num2 != 0) {
             double quoziente = num1 / num2;
             double resto = num1 % num2;
